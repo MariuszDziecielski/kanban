@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&subset=latin-ext')
+* 
+    box-sizing: border-box
+body 
+    margin: 0
+    padding: 0
+    font-size: 17px
+    font-family: 'Courgette', cursive
+    text-align: center
+    background: url(../images/4.jpg) no-repeat center/cover
+img 
+    max-width: 100%
+    height: auto
+/* BOARD */
+.board
+    max-width: 1200px
+    margin: 0 auto
+    margin-top: 100px
+    .logo
+        margin: 0 auto
+        width: 500px
+        transform: rotate(-5deg)
+    button
+        font-family: 'Courgette', cursive
+        cursor: pointer
+        background-color: #f2f2f2
+        transform: rotate(-5deg)
+        &:hover
+            background-color: #e6e6e6
+    h1 
+        margin: 60px 0
+        font-size: 50px
+        transform: rotate(-5deg)
+    .add-column
+        width: 100px
+        transform: rotate(-5deg)
+        display: block
+        margin: 0 auto
+        margin-bottom: 60px
+    label
+        transform: rotate(-5deg)
+        display: inline-block
+        font-size: 17px
+        font-weight: 700
+    input
+        margin-top: 30px
+        padding: 5px
+        padding-left: 9px
+        border-radius: 6px
+        font-weight: 700
+        transform: rotate(-5deg)
+        font-family: 'Courgette', cursive
+    .create-column
+        margin-top: 30px
+        transform: rotate(-5deg)
+        font-size: 20px
+        padding: 10px
+        border-radius: 9px
+        padding-left: 18px
+        &::before
+            content: ''
+            background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Plus_in_circle.svg/2000px-Plus_in_circle.svg.png) no-repeat center/contain
+            width: 20px
+            height: 20px
+            display: block
+            float: left
+            position: relative
+            right: 7px
+            top: 2px
+    .column-container
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: center
+        margin-top: 80px
+        /* COLUMN */
+        .column 
+            order: 1
+            min-width: 330px
+            min-height: 400px
+            margin-bottom: 10px
+            list-style: none
+            position: relative
+            h2
+                background: url(../images/2.png) no-repeat center/contain
+                height: 200px
+                transform: rotate(-5deg)
+                margin: 0
+                font-size: 20px
+                margin-bottom: 70px
+                padding-top: 24%
+                word-wrap: break-word
+            .btn-delete 
+                width: 42px
+                height: 42px
+                padding: 10px
+                border-radius: 9px
+                &::before
+                    content: ''
+                    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Trash_font_awesome.svg/512px-Trash_font_awesome.svg.png) no-repeat center/contain
+                    width: 20px
+                    height: 20px
+                    display: block
+            .column-add-card 
+                margin-top: 30px
+                margin-bottom: 60px
+                font-size: 17px
+                padding: 10px
+                padding-left: 16px
+                border-radius: 9px
+                cursor: pointer
+                &::before
+                    content: ''
+                    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Plus_in_circle.svg/2000px-Plus_in_circle.svg.png) no-repeat center/contain
+                    width: 15px
+                    height: 15px
+                    display: block
+                    float: left
+                    position: relative
+                    right: 7px
+                    top: 3px
+            .ui-sortable 
+                min-height: 340px
+            .card-list
+                list-style: none
+                margin: 5px
+                padding: 0px
+                /* CARD */
+                .card 
+                    box-sizing: border-box
+                    display: block
+                    height: 340px
+                    cursor: move
+                    margin-bottom: 30px
+                    padding-top: 29%
+                    transform: rotate(-19deg)
+                    overflow: hidden
+                    position: relative
+                    background: url(../images/1.png) no-repeat center/contain
+                    .btn-delete
+                        transform: rotate(13deg)
+                        position: absolute
+                        left: 70px
+                        top: 40px
+                    .card-description 
+                        padding-top: 40px
+                        width: 50%
+                        transform: rotate(13deg)
+                        margin: 0 auto
+                        font-size: 20px
+                        word-wrap: break-word
+                .card-placeholder 
+                    box-sizing: border-box
+                    display: block
+                    height: 340px
+                    background: url(../images/1.png) no-repeat center/contain
+                    opacity: 0.3
+                    transform: rotate(-19deg)
+                    margin-bottom: 5px
+.copyright
+    max-width: 1200px
+    margin: 0 auto  
+    background: url(../images/5.png) no-repeat center/contain
+    transform: rotate(-5deg)
+    display: flex
+    justify-content: center
+    margin-top: 30px
+    margin-bottom: 100px
+    padding-top: 110px
+    height: 320px
+    p
+        font-size: 20px
+/* Media queries */
+/* For computers: */
+@media (max-width: 992px)
+    .board
+        width: 100%
+    .copyright
+        width: 100%
+/* For tablets: */
+@media (max-width: 768px)
+    .board
+        .logo
+            width: 400px
+        h1
+            font-size: 40px    
+    .copyright
+        height: 270px
+        padding-top: 85px
+        p
+            margin-left: 20px
+/* For smart phones: */    
+@media (max-width: 480px)
+    .board
+        .logo
+            width: 200px
+        h1
+            font-size: 30px
+        .create-column
+            font-size: 16px
+            padding: 9px
+            padding-left: 16px
+        .column-container
+            .column 
+                h2
+                    height: 160px
+                    font-size: 17px
+                    margin-bottom: 60px
+                    padding-top: 19%
+                .column-add-card
+                    margin-bottom: 50px
+                    font-size: 16px
+                    padding: 9px
+                    padding-left: 15px
+                .ui-sortable 
+                    min-height: 250px
+                .card-list
+                    .card 
+                        height: 250px
+                        padding-top: 20%
+                        .btn-delete
+                            position: absolute
+                            left: 90px
+                            top: 25px
+                        .card-description
+                            font-size: 16px
+    .copyright
+        height: 160px
+        padding-top: 65px
+        p
+            margin: 0 25vw
+            font-size: 15px
+            margin-left: 26vw
