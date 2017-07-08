@@ -16,6 +16,7 @@ img
     max-width: 1200px
     margin: 0 auto
     margin-top: 100px
+    overflow: hidden
     .logo
         margin: 0 auto
         width: 500px
@@ -132,7 +133,7 @@ img
                     height: 340px
                     cursor: move
                     margin-bottom: 30px
-                    padding-top: 29%
+                    padding-top: 33%
                     transform: rotate(-19deg)
                     overflow: hidden
                     position: relative
@@ -160,16 +161,17 @@ img
 .copyright
     max-width: 1200px
     margin: 0 auto  
-    background: url(../images/5.png) no-repeat center/contain
-    transform: rotate(-5deg)
-    display: flex
-    justify-content: center
     margin-top: 30px
     margin-bottom: 100px
-    padding-top: 110px
-    height: 320px
+    overflow: hidden
     p
+        background: url(../images/5.png) no-repeat center/contain
         font-size: 20px
+        transform: rotate(-5deg)
+        display: flex
+        justify-content: center
+        padding-top: 110px
+        height: 320px
 /* Media queries */
 /* For computers: */
 @media (max-width: 992px)
@@ -185,10 +187,10 @@ img
         h1
             font-size: 40px    
     .copyright
-        height: 270px
-        padding-top: 85px
         p
-            margin-left: 20px
+            height: 270px
+            padding-top: 85px
+            padding-left: 10px
 /* For smart phones: */    
 @media (max-width: 480px)
     .board
@@ -216,18 +218,17 @@ img
                     min-height: 250px
                 .card-list
                     .card 
-                        height: 250px
-                        padding-top: 20%
+                        padding-top: 18%
+                        height: 240px
                         .btn-delete
-                            position: absolute
                             left: 90px
-                            top: 25px
+                            top: 20px
                         .card-description
-                            font-size: 16px
+                            font-size: 18px
     .copyright
-        height: 160px
-        padding-top: 65px
         p
-            margin: 0 25vw
-            font-size: 15px
-            margin-left: 26vw
+            height: 80vw
+            margin: 0 auto
+            width: 80vw
+            font-size: 1em
+            padding: 31vw 8vw 0 9vw
