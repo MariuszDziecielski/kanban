@@ -1,17 +1,17 @@
-var board = {
+const board = {
     name: 'Tablica Kanban',
-	createColumn: function (column) {
+    createColumn: function (column) {
         this.element.append(column.element);
         initSortable();
-	},
-	element: $('#board .column-container')
+    },
+    element: $('#board .column-container')
 };
 $('#columnName').focus(function () {
     $('#columnName').val('');
 });
 $('.create-column')
     .click(function () {
-        var columnName = $('#columnName').val();
+        const columnName = $('#columnName').val();
         if (columnName) {
             $.ajax({
                 url: baseUrl + '/column',
@@ -20,7 +20,7 @@ $('.create-column')
                     name: columnName
                 },
                 success: function (response) {
-                    var column = new Column(response.id, columnName);
+                    const column = new Column(response.id, columnName);
                     board.createColumn(column);
                 }
             });
