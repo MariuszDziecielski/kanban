@@ -7,21 +7,21 @@ $.ajaxSetup({
     headers: myHeaders
 });
 $.ajax({
-    url: baseUrl + '/board',
+    url: `${baseUrl}/board`,
     method: 'GET',
     success: function (response) {
         setupColumns(response.columns);
     }
 });
 function setupColumns(columns) {
-    columns.forEach(function (column) {
+    columns.forEach(column => {
         const col = new Column(column.id, column.name);
         board.createColumn(col);
         setupCards(col, column.cards);
     });
 }
 function setupCards(col, cards) {
-    cards.forEach(function (card) {
+    cards.forEach(card => {
         card = new Card(card.id, card.name, card.bootcamp_kanban_column_id);
         col.createCard(card);
     });

@@ -7,7 +7,7 @@ function Card(id, name) {
         const cardDeleteBtn = $('<button class="btn-delete" title="Usuń kartę z tablicy!"></button>'),
             cardDescription = $('<p class="card-description"></p>');
         card = $('<li class="card" title="Przenieś kartę w inne miejsce!"></li>');
-        cardDeleteBtn.click(function () {
+        cardDeleteBtn.click(() => {
             self.removeCard();
         });
         card.append(cardDeleteBtn);
@@ -20,7 +20,7 @@ Card.prototype = {
     removeCard: function () {
         const self = this;
         $.ajax({
-            url: baseUrl + '/card/' + self.id,
+            url: `${baseUrl}/card/${self.id}`,
             method: 'DELETE',
             success: function () {
                 self.element.remove();

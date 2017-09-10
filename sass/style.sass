@@ -6,16 +6,16 @@ $primFont: 'Courgette', cursive
 =pos-rel($top, $right)
     position: relative
     top: $top
-    right: $right 
-* 
+    right: $right
+*
     box-sizing: border-box
-body 
+body
     margin: 0
     padding: 0
     font: normal 17px $primFont
     text-align: center
     background: url(../images/4.jpg) no-repeat center/cover
-img 
+img
     max-width: 100%
     height: auto
 /* BOARD */
@@ -34,7 +34,7 @@ img
         transform: rotate(-5deg)
         &:hover
             background-color: #e6e6e6
-    h1 
+    h1
         margin: 60px 0
         font-size: 50px
         transform: rotate(-5deg)
@@ -77,7 +77,7 @@ img
         justify-content: center
         margin-top: 80px
         /* COLUMN */
-        .column 
+        .column
             order: 1
             min-width: 330px
             min-height: 400px
@@ -92,7 +92,7 @@ img
                 margin: 0 0 70px
                 padding-top: 24%
                 word-wrap: break-word
-            .btn-delete 
+            .btn-delete
                 +dimensions(42px, 42px)
                 padding: 10px
                 border-radius: 9px
@@ -101,7 +101,7 @@ img
                     background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Trash_font_awesome.svg/512px-Trash_font_awesome.svg.png) no-repeat center/contain
                     +dimensions(20px, 20px)
                     display: block
-            .column-add-card 
+            .column-add-card
                 margin: 30px 0 60px
                 font-size: 17px
                 padding: 10px 10px 10px 16px
@@ -114,14 +114,14 @@ img
                     display: block
                     float: left
                     +pos-rel(3px, 7px)
-            .ui-sortable 
+            .ui-sortable
                 min-height: 340px
             .card-list
                 list-style: none
                 margin: 5px
                 padding: 0px
                 /* CARD */
-                .card 
+                .card
                     box-sizing: border-box
                     display: block
                     height: 340px
@@ -137,14 +137,14 @@ img
                         position: absolute
                         left: 70px
                         top: 40px
-                    .card-description 
+                    .card-description
                         padding-top: 40px
                         width: 50%
                         transform: rotate(13deg)
                         margin: 0 auto
                         font-size: 20px
                         word-wrap: break-word
-                .card-placeholder 
+                .card-placeholder
                     box-sizing: border-box
                     display: block
                     height: 340px
@@ -179,12 +179,12 @@ img
         .logo
             width: 400px
         h1
-            font-size: 40px    
+            font-size: 40px
     .copyright
         p
             height: 270px
             padding: 85px 0 0 10px
-/* For smart phones: */    
+/* For smart phones: */
 @media (max-width: 480px)
     .board
         .logo
@@ -195,7 +195,7 @@ img
             font-size: 16px
             padding: 9px 9px 9px 16px
         .column-container
-            .column 
+            .column
                 h2
                     height: 160px
                     font-size: 17px
@@ -204,11 +204,11 @@ img
                 .column-add-card
                     margin-bottom: 50px
                     font-size: 16px
-                    padding: 9px 9px 9px 15px 
-                .ui-sortable 
+                    padding: 9px 9px 9px 15px
+                .ui-sortable
                     min-height: 250px
                 .card-list
-                    .card 
+                    .card
                         padding-top: 18%
                         height: 240px
                         .btn-delete

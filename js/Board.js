@@ -6,15 +6,15 @@ const board = {
     },
     element: $('#board .column-container')
 };
-$('#columnName').focus(function () {
+$('#columnName').focus(() => {
     $('#columnName').val('');
 });
 $('.create-column')
-    .click(function () {
+    .click(() => {
         const columnName = $('#columnName').val();
         if (columnName) {
             $.ajax({
-                url: baseUrl + '/column',
+                url: `${baseUrl}/column`,
                 method: 'POST',
                 data: {
                     name: columnName

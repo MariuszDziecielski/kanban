@@ -5,7 +5,7 @@ function Column(id, name) {
     this.element = createColumn();
     function createColumn() {
         const column = $('<div class="column"></div>'),
-            columnTitle = $('<h2 class="column-title">' + self.name + '</h2>'),
+            columnTitle = $(`<h2 class="column-title">${self.name}</h2>`),
             columnCardList = $('<ul class="card-list"></ul>'),
             columnDelete = $('<button class="btn-delete" title="Usuń kolumnę z tablicy!"></button>'),
             label = $('<label>').attr('for', 'cardName').text('Wpisz nazwę karty!'),
@@ -16,18 +16,18 @@ function Column(id, name) {
                 'title': 'Wpisz nazwę nowej karty tablicy!'
             }),
             columnAddCard = $('<button class="column-add-card" title="Dodaj nową kartę do tablicy!">Dodaj kartę</button>');
-        columnDelete.click(function () {
+        columnDelete.click(() => {
             self.deleteColumn();
         });
-        input.focus(function () {
+        input.focus(() => {
             input.val('');
         });
-        columnAddCard.click(function (event) {
+        columnAddCard.click((event) => {
             const cardName = input.val();
             event.preventDefault();
             if (cardName) {
                 $.ajax({
-                    url: baseUrl + '/card',
+                    url: `${baseUrl}/card`,
                     method: 'POST',
                     data: {
                         name: cardName,
@@ -59,7 +59,7 @@ Column.prototype = {
     deleteColumn: function () {
         const self = this;
         $.ajax({
-            url: baseUrl + '/column/' + self.id,
+            url: `${baseUrl}/column/${self.id}`,
             method: 'DELETE',
             success: function (response) {
                 self.element.remove();
