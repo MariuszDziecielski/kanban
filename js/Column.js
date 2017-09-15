@@ -4,26 +4,26 @@ function Column(id, name) {
     this.name = name;
     this.element = createColumn();
     function createColumn() {
-        const column = $('<div class="column"></div>'),
-            columnTitle = $(`<h2 class="column-title">${self.name}</h2>`),
-            columnCardList = $('<ul class="card-list"></ul>'),
-            columnDelete = $('<button class="btn-delete" title="Usuń kolumnę z tablicy!"></button>'),
-            label = $('<label>').attr('for', 'cardName').text('Wpisz nazwę karty!'),
-            input = $('<input>').attr({
+        const $column = $('<div class="column"></div>'),
+            $columnTitle = $(`<h2 class="column-title">${self.name}</h2>`),
+            $columnCardList = $('<ul class="card-list"></ul>'),
+            $columnDelete = $('<button class="btn-delete" title="Usuń kolumnę z tablicy!"></button>'),
+            $label = $('<label>').attr('for', 'cardName').text('Wpisz nazwę karty!'),
+            $input = $('<input>').attr({
                 'type': 'text',
                 'id': 'cardName',
                 'value': 'Nowa karta',
                 'title': 'Wpisz nazwę nowej karty tablicy!'
             }),
-            columnAddCard = $('<button class="column-add-card" title="Dodaj nową kartę do tablicy!">Dodaj kartę</button>');
-        columnDelete.click(() => {
+            $columnAddCard = $('<button class="column-add-card" title="Dodaj nową kartę do tablicy!">Dodaj kartę</button>');
+        $columnDelete.click(() => {
             self.deleteColumn();
         });
-        input.focus(() => {
-            input.val('');
+        $input.focus(() => {
+            $input.val('');
         });
-        columnAddCard.click((event) => {
-            const cardName = input.val();
+        $columnAddCard.click((event) => {
+            const cardName = $input.val();
             event.preventDefault();
             if (cardName) {
                 $.ajax({
@@ -39,17 +39,17 @@ function Column(id, name) {
                     }
                 });
             }
-            input.val('Nowa karta');
+            $input.val('Nowa karta');
         });
-        column.append(columnDelete)
-            .append(columnTitle)
-            .append(label)
+        $column.append($columnDelete)
+            .append($columnTitle)
+            .append($label)
             .append($('<br>'))
-            .append(input)
+            .append($input)
             .append($('<br>'))
-            .append(columnAddCard)
-            .append(columnCardList);
-        return column;
+            .append($columnAddCard)
+            .append($columnCardList);
+        return $column;
     }
 }
 Column.prototype = {
