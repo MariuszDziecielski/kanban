@@ -22,7 +22,7 @@ class Card {
         $.ajax({
             url: `${baseUrl}/card/${self.id}`,
             method: 'DELETE',
-            success: function () {
+            success: () => {
                 self.element.remove();
             }
         });

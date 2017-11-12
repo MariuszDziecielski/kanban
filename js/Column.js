@@ -23,9 +23,9 @@ class Column {
             $input.focus(() => {
                 $input.val('');
             });
-            $columnAddCard.click((event) => {
+            $columnAddCard.click(e => {
                 const cardName = $input.val();
-                event.preventDefault();
+                e.preventDefault();
                 if (cardName) {
                     $.ajax({
                         url: `${baseUrl}/card`,
@@ -34,7 +34,7 @@ class Column {
                             name: cardName,
                             bootcamp_kanban_column_id: self.id
                         },
-                        success: function (response) {
+                        success: response => {
                             const card = new Card(response.id, cardName);
                             self.createCard(card);
                         }
@@ -61,7 +61,7 @@ class Column {
         $.ajax({
             url: `${baseUrl}/column/${self.id}`,
             method: 'DELETE',
-            success: function (response) {
+            success: response => {
                 self.element.remove();
             }
         });
