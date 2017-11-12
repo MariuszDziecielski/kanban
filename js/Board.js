@@ -1,7 +1,7 @@
 const board = {
     name: 'Tablica Kanban',
-    createColumn: column => {
-        board.element.append(column.element);
+    createColumn(column) {
+        this.element.append(column.element);
         initSortable();
     },
     element: $('#board .column-container')
