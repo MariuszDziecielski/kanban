@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css?family=Courgette&subset=latin-ext");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 17px "Courgette", cursive;
+  text-align: center;
+  background: url(../images/wood.jpg) no-repeat center/cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* BOARD */
+.board {
+  max-width: 1200px;
+  margin: 100px auto 0;
+  overflow: hidden;
+}
+
+.board .logo {
+  margin: 0 auto;
+  width: 500px;
+  transform: rotate(-5deg);
+}
+
+.board button {
+  font-family: "Courgette", cursive;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  transform: rotate(-5deg);
+}
+
+.board button:hover {
+  background-color: #e6e6e6;
+}
+
+.board h1 {
+  margin: 60px 0;
+  font-size: 50px;
+  transform: rotate(-5deg);
+}
+
+.board .add-column {
+  width: 100px;
+  transform: rotate(-5deg);
+  display: block;
+  margin: 0 auto 60px;
+}
+
+.board label {
+  transform: rotate(-5deg);
+  display: inline-block;
+  font: 700 17px "Courgette", cursive;
+}
+
+.board input {
+  margin-top: 30px;
+  padding: 5px 5px 5px 9px;
+  border-radius: 6px;
+  transform: rotate(-5deg);
+  font: 700 13px "Courgette", cursive;
+}
+
+.board .create-column {
+  margin-top: 30px;
+  transform: rotate(-5deg);
+  font-size: 20px;
+  padding: 10px 10px 10px 18px;
+  border-radius: 9px;
+}
+
+.board .create-column::before {
+  content: '';
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Plus_in_circle.svg/2000px-Plus_in_circle.svg.png) no-repeat center/contain;
+  width: 20px;
+  height: 20px;
+  display: block;
+  float: left;
+  position: relative;
+  top: 2px;
+  right: 7px;
+}
+
+.board .column-container {
+  -webkit-display: flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 80px;
+  /* COLUMN */
+}
+
+.board .column-container .column {
+  order: 1;
+  min-width: 330px;
+  min-height: 400px;
+  margin-bottom: 10px;
+  list-style: none;
+  position: relative;
+}
+
+.board .column-container .column h2 {
+  background: url(../images/notes_with_lines.png) no-repeat center/contain;
+  height: 200px;
+  transform: rotate(-5deg);
+  font-size: 20px;
+  margin: 0 0 70px;
+  padding-top: 24%;
+  word-wrap: break-word;
+}
+
+.board .column-container .column .btn-delete {
+  width: 42px;
+  height: 42px;
+  padding: 10px;
+  border-radius: 9px;
+}
+
+.board .column-container .column .btn-delete::before {
+  content: '';
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Trash_font_awesome.svg/512px-Trash_font_awesome.svg.png) no-repeat center/contain;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.board .column-container .column .column-add-card {
+  margin: 30px 0 60px;
+  font-size: 17px;
+  padding: 10px 10px 10px 16px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.board .column-container .column .column-add-card::before {
+  content: '';
+  background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Plus_in_circle.svg/2000px-Plus_in_circle.svg.png) no-repeat center/contain;
+  width: 15px;
+  height: 15px;
+  display: block;
+  float: left;
+  position: relative;
+  top: 3px;
+  right: 7px;
+}
+
+.board .column-container .column .ui-sortable {
+  min-height: 340px;
+}
+
+.board .column-container .column .card-list {
+  list-style: none;
+  margin: 5px;
+  padding: 0px;
+  /* CARD */
+}
+
+.board .column-container .column .card-list .card {
+  box-sizing: border-box;
+  display: block;
+  height: 340px;
+  cursor: move;
+  margin-bottom: 30px;
+  padding-top: 33%;
+  transform: rotate(-19deg);
+  overflow: hidden;
+  position: relative;
+  background: url(../images/sticky_note.png) no-repeat center/contain;
+}
+
+.board .column-container .column .card-list .card .btn-delete {
+  transform: rotate(13deg);
+  position: absolute;
+  left: 70px;
+  top: 40px;
+}
+
+.board .column-container .column .card-list .card .card-description {
+  padding-top: 40px;
+  width: 50%;
+  transform: rotate(13deg);
+  margin: 0 auto;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+.board .column-container .column .card-list .card-placeholder {
+  box-sizing: border-box;
+  display: block;
+  height: 340px;
+  background: url(../images/sticky_note.png) no-repeat center/contain;
+  opacity: 0.3;
+  transform: rotate(-19deg);
+  margin-bottom: 5px;
+}
+
+.copyright {
+  max-width: 1200px;
+  margin: 30px auto 100px;
+  overflow: hidden;
+}
+
+.copyright p {
+  background: url(../images/sticky_note_horizontal.png) no-repeat center/contain;
+  font-size: 20px;
+  transform: rotate(-5deg);
+  -webkit-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding-top: 110px;
+  height: 320px;
+}
+
+/* Media queries */
+/* For computers: */
+@media (max-width: 992px) {
+  .board {
+    width: 100%;
+  }
+  .copyright {
+    width: 100%;
+  }
+}
+
+/* For tablets: */
+@media (max-width: 768px) {
+  .board .logo {
+    width: 400px;
+  }
+  .board h1 {
+    font-size: 40px;
+  }
+  .copyright p {
+    height: 270px;
+    padding: 85px 0 0 10px;
+  }
+}
+
+/* For smart phones: */
+@media (max-width: 480px) {
+  .board .logo {
+    width: 200px;
+  }
+  .board h1 {
+    font-size: 30px;
+  }
+  .board .create-column {
+    font-size: 16px;
+    padding: 9px 9px 9px 16px;
+  }
+  .board .column-container .column h2 {
+    height: 160px;
+    font-size: 17px;
+    margin-bottom: 60px;
+    padding-top: 19%;
+  }
+  .board .column-container .column .column-add-card {
+    margin-bottom: 50px;
+    font-size: 16px;
+    padding: 9px 9px 9px 15px;
+  }
+  .board .column-container .column .ui-sortable {
+    min-height: 250px;
+  }
+  .board .column-container .column .card-list .card {
+    padding-top: 18%;
+    height: 240px;
+  }
+  .board .column-container .column .card-list .card .btn-delete {
+    left: 90px;
+    top: 20px;
+  }
+  .board .column-container .column .card-list .card .card-description {
+    font-size: 18px;
+  }
+  .copyright p {
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vw;
+    font-size: 1em;
+    padding: 31vw 8vw 0 9vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

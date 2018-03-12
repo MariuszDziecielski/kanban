@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tablica kanban">
+    <meta name="author" content="Mariusz Dzięcielski">
+    <title>Tablica kanban</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="board" class="board">
+        <img src="images/stationery.png" alt="" class="logo">
+        <h1>Tablica kanban</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Jeremybennett-sticky-note-pad-and-pencil.svg/512px-Jeremybennett-sticky-note-pad-and-pencil.svg.png" alt="" class="add-column">
+        <label for="columnName">Wpisz nazwę kolumny!</label>
+        <br>
+        <input type="text" id="columnName" value="Nowa kolumna" title="Wpisz nazwę nowej kolumny tablicy!">
+        <br>
+        <button class="create-column" title="Dodaj nową kolumnę do tablicy!">Dodaj kolumnę</button>
+        <div class="column-container"></div>
+    </div>
+    <div class="copyright">
+        <p>
+            Copyright &copy; 2017 Mariusz Dzięcielski
+        </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/Column.js"></script>
+    <script src="js/Card.js"></script>
+    <script src="js/Board.js"></script>
+    <script src="js/App.js"></script>
+</body>
+</html>
