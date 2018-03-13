@@ -11,6 +11,7 @@ $.ajax({
     method: 'GET',
     success: response => {
         setupColumns(response.columns);
+        $('.column-container').empty();///////////////////////    ??????
     }
 });
 function setupColumns(columns) {
